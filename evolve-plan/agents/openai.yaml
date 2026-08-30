@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evolve Plan"
+  short_description: "推进 Living Plan 并维护 Evolution Graph"
+  default_prompt: "使用 $evolve-plan 检查当前项目并推进 Living Plan。"
