@@ -5,7 +5,7 @@
 ## Language
 
 **Code Map Skill**:
-只有一个 `SKILL.md` 的独立 Skill；面向多语言 Git 仓库维护文件职责地图，不承担符号解析、依赖分析或设计历史。
+独立维护多语言 Git 仓库导航文档的 Skill；使用 `SKILL.md` 定义行为，并用按需 reference 展示 `AGENTS.md` 与 `CODEMAP.md` 的结构，不承担符号解析、依赖分析或设计历史。
 _Avoid_: Graph Plan extension, architecture generator
 
 **Code Map**:

@@ -1,11 +1,11 @@
 ---
 name: code-map
-description: Maintain or use a repository-root CODEMAP.md that maps Git-tracked text files to concise responsibilities. Use when creating or updating a code map, checking whether it reflects file changes, locating relevant files for a task, or after an authorized change adds, removes, moves, or repurposes files. Do not use for symbol indexes, dependency graphs, or architecture history.
+description: "Create or use repository navigation docs: a root AGENTS.md for task routing and CODEMAP.md for concise file responsibilities. Use when bootstrapping these docs, checking or updating a code map, locating relevant files, or after an authorized change adds, removes, moves, or repurposes files. Do not use for symbol indexes, dependency graphs, or architecture history."
 ---
 
 # Code Map
 
-Maintain `CODEMAP.md` as a small navigation index. Code is the authority for current behavior; the map only answers what each included file is responsible for.
+Maintain `CODEMAP.md` as a small navigation index. Code is the authority for current behavior; the map only answers what each included file is responsible for. `AGENTS.md` routes tasks and records repository-wide operating rules without duplicating the map.
 
 ## Scope
 
@@ -13,19 +13,15 @@ Work from the root returned by `git rev-parse --show-toplevel`. Include Git-trac
 
 Leave out binaries, lockfiles, vendored code, caches, generated artifacts, and `CODEMAP.md` itself. Prefer a useful index over a directory-tree mirror.
 
-Use one entry per file, grouped by directory:
-
-```md
-# Code Map
-
-## src/auth
-
-- [`src/auth/service.py`](src/auth/service.py) — Handles sign-in, token issuance, and session validation.
-```
-
-Keep each responsibility to one sentence. Describe the file's stable role, not its symbol inventory, implementation details, history, planned work, or architecture decisions.
+Use one entry per file, grouped by directory. Keep each responsibility to one sentence. Describe the file's stable role, not its symbol inventory, implementation details, history, planned work, or architecture decisions.
 
 ## Choose a mode
+
+### Bootstrap
+
+Use when the user asks to create repository navigation docs. Read [references/AGENTS.md](references/AGENTS.md) for the task-routing shape and [references/CODEMAP.md](references/CODEMAP.md) for the file-map shape. Adapt both to the target repository; the examples are not content to copy verbatim.
+
+Create root `AGENTS.md` and `CODEMAP.md` only within the user's authorized scope. If either already exists, preserve its valid content and change only what the request requires.
 
 ### Query
 
