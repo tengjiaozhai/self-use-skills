@@ -56,4 +56,6 @@ python3 <skill-dir>/scripts/evolution_graph.py apply \
 
 根据写入后的实际状态返回 Runtime Contract §9 定义的标准结果块。`Files` 必须完整区分为证明 `Current` 而读取的文件和实际修改的文件；`Decision` 必须公开每个 unresolved 设计选择。
 
-只有同时满足以下条件才完成：`apply` 成功、写入后校验通过、有效变化使 revision 恰好增加一次、修改文件仅限 `PLAN.md` 和必要的 `evolution/*.md`。
+写入校验通过后，若目标项目根存在 `CODEMAP.md`，调用 `code-map` skill 同步地图，登记本次写入或变更的 `PLAN.md` 与 `evolution/*.md`。该地图变更属于 code-map 的职责范围，不计入 evolve-plan 的修改文件清单。
+
+只有同时满足以下条件才完成：`apply` 成功、写入后校验通过、有效变化使 revision 恰好增加一次、修改文件仅限 `PLAN.md` 和必要的 `evolution/*.md`（后续同步地图由 code-map 完成）。

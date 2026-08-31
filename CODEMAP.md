@@ -1,18 +1,18 @@
-# CODEMAP.md 示例
+# CODEMAP.md
 
-> 用于构建目标仓库根 `CODEMAP.md` 的结构示例。以下条目展示格式，必须替换为目标仓库的实际文件职责。
-
-本文件只说明文件职责，帮助定位下一份应该读取的内容。实际文件内容是当前行为的最终事实。两个 Skill 的连接关系见目标仓库根 AGENTS.md 工作规则 4。
+> 本仓库导航索引。只说明文件职责，帮助定位下一份应该读取的内容。实际文件内容是当前行为的最终事实。两个 Skill 的连接关系见根 [AGENTS.md](AGENTS.md) 工作规则 4。
 
 ## 根目录
 
-- [AGENTS.md](AGENTS.md) — 根据任务类型路由到相关 Skill、契约、实现或调研文件。
-- [CONTEXT.md](CONTEXT.md) — 定义 Code Map、Code Map Skill 和 Freshness Check 等稳定术语。
+- [AGENTS.md](AGENTS.md) — 根据任务类型路由到相关 Skill 文件，并记录 code-map 与 evolve-plan 的连接规则。
+- [CONTEXT.md](CONTEXT.md) — 定义 Code Map、Code Map Skill、Semantic Map 和 Freshness Check 等稳定术语。
 - [LICENSE](LICENSE) — 声明仓库采用 MIT License。
 
 ## code-map
 
-- [code-map/SKILL.md](code-map/SKILL.md) — 定义 `CODEMAP.md` 的查询、检查和更新方式，并登记 evolve-plan 产物。
+- [code-map/SKILL.md](code-map/SKILL.md) — 定义 CODEMAP.md 的查询、检查和更新方式，并登记 evolve-plan 产物。
+- [code-map/references/AGENTS.md](code-map/references/AGENTS.md) — 供 bootstrap 使用的根 AGENTS.md 结构模板。
+- [code-map/references/CODEMAP.md](code-map/references/CODEMAP.md) — 供 bootstrap 使用的根 CODEMAP.md 结构模板。
 
 ## evolve-plan
 

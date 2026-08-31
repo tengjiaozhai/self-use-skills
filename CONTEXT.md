@@ -1,6 +1,6 @@
 # Self-use Skills
 
-本仓库保存可独立安装和演进的 Agent Skills。代码地图能力与设计演进能力保持职责分离。
+本仓库保存可独立安装和演进的 Agent Skills。代码地图能力与设计演进能力职责分离，但通过调用协作：evolve-plan 写入 PLAN 后调用 code-map 同步地图。
 
 ## Language
 

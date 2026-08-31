@@ -1,6 +1,6 @@
-# AGENTS.md 示例
+# Self-use Skills 仓库规则
 
-> 用于构建目标仓库根 `AGENTS.md` 的结构示例。必须根据目标仓库的真实任务、路径、约束和验证方式改写。
+本仓库保存两个可独立安装的 Skill：`code-map`（导航）与 `evolve-plan`（演进）。职责分离，但通过调用协作：evolve-plan 改变目标项目结构后调用 code-map 同步地图。
 
 ## 权威来源
 
@@ -9,6 +9,7 @@
 - `CONTEXT.md`：稳定术语。
 - `docs/research/`：调研依据，不自动等于当前决定。
 - `evolve-plan/references/runtime-contract.md`：evolve-plan 运行契约。
+- `code-map/references/`：code-map 输出文档的结构模板。
 
 ## 任务路由
 
@@ -29,6 +30,7 @@
 4. `evolve-plan` 与 `code-map` 的连接关系：
    - `evolve-plan` 的 advance 写入 `PLAN.md` 或 `evolution/*.md` 后，调用 `code-map` skill 更新目标项目的地图。
    - `code-map` 将 `PLAN.md` 与 `evolution/*.md` 视为 evolve-plan 产物，纳入导航登记与 freshness check 范围。
+   - 修改任一 Skill 的协作行为时，同时核对另一个 Skill 是否受影响。
 5. 保持最小改动，不修改当前任务无关的文件。
 
 ## 验证

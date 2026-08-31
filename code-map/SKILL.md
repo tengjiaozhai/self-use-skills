@@ -13,6 +13,8 @@ Work from the root returned by `git rev-parse --show-toplevel`. Include Git-trac
 
 Leave out binaries, lockfiles, vendored code, caches, generated artifacts, and `CODEMAP.md` itself. Prefer a useful index over a directory-tree mirror.
 
+Treat `PLAN.md` and `evolution/*.md` as evolve-plan's hand-maintained outputs and include them in the map when present. When evolve-plan calls this skill after an advance, prioritize entries for the files it just wrote.
+
 Use one entry per file, grouped by directory. Keep each responsibility to one sentence. Describe the file's stable role, not its symbol inventory, implementation details, history, planned work, or architecture decisions.
 
 ## Choose a mode
