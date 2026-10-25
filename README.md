@@ -1,6 +1,6 @@
 # Self-use Skills
 
-个人 Agent Skills 仓库，保存可独立安装、可独立演进的 Agent Skill。目前包含两个：`code-map`（仓库导航）与 `evolve-plan`（计划演进）。两者职责分离，但通过调用协作。
+个人 Agent Skills 仓库，保存可独立安装、可独立演进的 Agent Skill。目前包含 `code-map`（仓库导航）、`evolve-plan`（计划演进）与 `explain-bug-fix`（故障修复讲解）。导航与演进通过调用协作，讲解能力独立使用。
 
 ## 仓库内容
 
@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | [code-map](code-map/SKILL.md) | 维护目标仓库根目录的 `CODEMAP.md`，以一句话说明每个值得导航的文件负责什么 | 创建/检查/更新代码地图；需要快速定位文件职责 |
 | [evolve-plan](evolve-plan/SKILL.md) | 推进唯一的 Living `PLAN.md`，并用稀疏的 Evolution Graph 保存长期设计理由 | 仓库已有 `PLAN.md` 或 `evolution/`，需要规划或推进下一 revision |
+| [explain-bug-fix](explain-bug-fix/SKILL.md) | 对照现象与新旧代码，讲清故障触发、修复机制及验证范围 | 理解一个补丁，或按代码复盘“旧逻辑为什么出错，新逻辑为何有效” |
 
 ## code-map
 
@@ -25,6 +26,17 @@
 - **draft / advance 两个分支**：draft 零写入只产出提案；advance 原子写入 `PLAN.md` 和必要的 `evolution/*.md`
 - **四道门**：Decided / Material / Grounded / Durable，决定是否创建 Evolution Node
 - **校验与测试**：`scripts/evolution_graph.py` 实现 Graph 校验、检索和原子写入，附 10 个单元测试
+
+## explain-bug-fix
+
+围绕故障讲因果，不按 diff 顺序堆改动清单：现象 → 旧逻辑和触发值 → 新逻辑如何改变路径 → 验证与剩余边界。示例与最小输入要求见 [SKILL.md](explain-bug-fix/SKILL.md)。
+
+使用时给出故障现象和可定位的新旧代码（仓库、PR、commit、diff 或两份文件），已有复现与验证结果一并提供；仓库里能查到的材料不必手工复制。缺少旧版时只解释当前行为并说明缺口，避免编造历史。
+
+```text
+使用 $explain-bug-fix 解释这次修复：现象是……；旧版是……；新版是……。
+按“旧代码为何触发问题、新代码为什么能解决”讲解，注明验证范围。
+```
 
 ## 连接关系
 
@@ -47,6 +59,7 @@ git clone https://github.com/tengjiaozhai/self-use-skills.git
 # 将 skill 目录放入你的 skills 目录，例如 Claude Code / Codex：
 ln -s "$PWD/self-use-skills/code-map" ~/.agents/skills/code-map
 ln -s "$PWD/self-use-skills/evolve-plan" ~/.agents/skills/evolve-plan
+ln -s "$PWD/self-use-skills/explain-bug-fix" ~/.agents/skills/explain-bug-fix
 ```
 
 ## 仓库结构
@@ -66,6 +79,10 @@ ln -s "$PWD/self-use-skills/evolve-plan" ~/.agents/skills/evolve-plan
 │   ├── assets/                  # PLAN / Evolution Node 模板
 │   ├── agents/openai.yaml
 │   └── tests/
+├── explain-bug-fix/             # 故障修复讲解 skill
+│   ├── SKILL.md
+│   ├── references/examples.md
+│   └── agents/openai.yaml
 └── docs/research/               # 调研报告
 ```
 
@@ -75,6 +92,7 @@ ln -s "$PWD/self-use-skills/evolve-plan" ~/.agents/skills/evolve-plan
 # 校验 Skill 目录结构（skill-creator）
 python3 <skill-creator>/scripts/quick_validate.py code-map
 python3 <skill-creator>/scripts/quick_validate.py evolve-plan
+python3 <skill-creator>/scripts/quick_validate.py explain-bug-fix
 
 # evolve-plan 单元测试
 cd evolve-plan && python3 -m unittest discover -s tests -p 'test_*.py'

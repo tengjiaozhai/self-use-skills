@@ -1,6 +1,6 @@
 # Self-use Skills 仓库规则
 
-本仓库保存两个可独立安装的 Skill：`code-map`（导航）与 `evolve-plan`（演进）。职责分离，但通过调用协作：evolve-plan 改变目标项目结构后调用 code-map 同步地图。
+本仓库保存可独立安装的 Skill：`code-map`（导航）、`evolve-plan`（演进）与 `explain-bug-fix`（故障修复讲解）。前两者通过调用协作：evolve-plan 改变目标项目结构后调用 code-map 同步地图；讲解 Skill 不引入新的协作依赖。
 
 ## 权威来源
 
@@ -17,6 +17,7 @@
 | --- | --- |
 | 查找某项能力在哪个文件 | `CODEMAP.md` |
 | 创建、检查或更新代码地图 | `code-map/SKILL.md` |
+| 编写或调整故障修复讲解流程 | `explain-bug-fix/SKILL.md` |
 | 修改 Living Plan 工作流 | `evolve-plan/SKILL.md` |
 | 修改 Evolution Graph 行为 | `evolve-plan/references/runtime-contract.md` |
 | 调查 Evolution Graph 实现 | `evolve-plan/scripts/evolution_graph.py` |

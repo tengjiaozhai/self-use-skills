@@ -1,10 +1,11 @@
 # CODEMAP.md
 
-> 本仓库导航索引。只说明文件职责，帮助定位下一份应该读取的内容。实际文件内容是当前行为的最终事实。两个 Skill 的连接关系见根 [AGENTS.md](AGENTS.md) 工作规则 4。
+> 本仓库导航索引。只说明文件职责，帮助定位下一份应该读取的内容。实际文件内容是当前行为的最终事实。code-map 与 evolve-plan 的连接关系见根 [AGENTS.md](AGENTS.md) 工作规则 4。
 
 ## 根目录
 
 - [AGENTS.md](AGENTS.md) — 根据任务类型路由到相关 Skill 文件，并记录 code-map 与 evolve-plan 的连接规则。
+- [README.md](README.md) — 说明各 Skill 的用途、输入、安装和验证方式。
 - [CONTEXT.md](CONTEXT.md) — 定义 Code Map、Code Map Skill、Semantic Map 和 Freshness Check 等稳定术语。
 - [LICENSE](LICENSE) — 声明仓库采用 MIT License。
 
@@ -23,6 +24,12 @@
 - [evolve-plan/assets/evolution-node.template.md](evolve-plan/assets/evolution-node.template.md) — 提供 Evolution Node 的标准模板。
 - [evolve-plan/agents/openai.yaml](evolve-plan/agents/openai.yaml) — 定义 evolve-plan 的界面元数据。
 - [evolve-plan/tests/test_evolution_graph.py](evolve-plan/tests/test_evolution_graph.py) — 验证 Evolution Graph CLI 的主要行为。
+
+## explain-bug-fix
+
+- [explain-bug-fix/SKILL.md](explain-bug-fix/SKILL.md) — 定义围绕故障现象、新旧代码与验证证据构建因果讲解的流程。
+- [explain-bug-fix/references/examples.md](explain-bug-fix/references/examples.md) — 用路由与跨轮状态案例示范因果讲解粒度及证据边界。
+- [explain-bug-fix/agents/openai.yaml](explain-bug-fix/agents/openai.yaml) — 定义故障修复讲解 Skill 的界面名称、描述和默认调用提示。
 
 ## docs/research
 

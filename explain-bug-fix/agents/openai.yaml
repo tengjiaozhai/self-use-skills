@@ -1,0 +1,4 @@
+interface:
+  display_name: "解释故障与修复"
+  short_description: "对照新旧代码讲清故障触发、修复因果和验证范围，便于复习与交接"
+  default_prompt: "使用 $explain-bug-fix，结合故障现象和新旧代码，讲清旧代码为什么出错、修改如何解决，以及验证范围。"
