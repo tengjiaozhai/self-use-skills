@@ -27,8 +27,8 @@
 
 ## explain-bug-fix
 
-- [explain-bug-fix/SKILL.md](explain-bug-fix/SKILL.md) — 定义围绕故障现象、新旧代码与验证证据构建因果讲解的流程。
-- [explain-bug-fix/references/examples.md](explain-bug-fix/references/examples.md) — 用路由与跨轮状态案例示范因果讲解粒度及证据边界。
+- [explain-bug-fix/SKILL.md](explain-bug-fix/SKILL.md) — 定义用 SCQA 组织场景、以排查证据和新旧代码解释修复并检验学习迁移的流程。
+- [explain-bug-fix/references/examples.md](explain-bug-fix/references/examples.md) — 用路由与跨轮状态案例示范 SCQA 讲解、代码因果对照、验证边界及变式练习。
 - [explain-bug-fix/agents/openai.yaml](explain-bug-fix/agents/openai.yaml) — 定义故障修复讲解 Skill 的界面名称、描述和默认调用提示。
 
 ## docs/research
