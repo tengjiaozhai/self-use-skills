@@ -1,6 +1,11 @@
 ---
 name: code-map
+version: 1.0.0
+display_name: 代码地图
+display_name_en: Code Map
 description: "Create or use repository navigation docs: a root AGENTS.md for task routing and CODEMAP.md for concise file responsibilities. Use when bootstrapping these docs, checking or updating a code map, locating relevant files, or after an authorized change adds, removes, moves, or repurposes files. Do not use for symbol indexes, dependency graphs, or architecture history."
+description_zh: "创建或使用仓库导航文档：根目录 AGENTS.md 负责任务路由，CODEMAP.md 记录简洁的文件职责。用于建立这两份文档、检查或更新代码地图、定位相关文件，或在已授权的改动新增、删除、移动、改变文件职责之后。不用于符号索引、依赖图或架构历史。"
+description_en: "Create or use repository navigation docs: a root AGENTS.md for task routing and CODEMAP.md for concise file responsibilities. Use when bootstrapping these docs, checking or updating a code map, locating relevant files, or after an authorized change adds, removes, moves, or repurposes files. Do not use for symbol indexes, dependency graphs, or architecture history."
 ---
 
 # Code Map

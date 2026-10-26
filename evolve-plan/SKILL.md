@@ -1,6 +1,11 @@
 ---
 name: evolve-plan
+version: 1.0.0
+display_name: 演进计划
+display_name_en: Evolve Plan
 description: 演进项目的 Living PLAN 和 Evolution Graph。用于仓库已有 PLAN.md 或 evolution/，且用户要求规划或推进下一 revision；也用于用户明确要求在指定项目中初始化这套工作流时。
+description_zh: 演进项目的 Living PLAN 和 Evolution Graph。用于仓库已有 PLAN.md 或 evolution/，且用户要求规划或推进下一 revision；也用于用户明确要求在指定项目中初始化这套工作流时。
+description_en: Evolve a project's Living PLAN and Evolution Graph. Use when the repository already has PLAN.md or evolution/ and the user asks to plan or advance the next revision; also use when the user explicitly asks to initialize this workflow in a specified project.
 ---
 
 # 演进 Plan
